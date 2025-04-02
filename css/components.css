@@ -63,11 +63,19 @@
 }
 
 /* Theme Toggle */
+/* Modificación para evitar superposición con el menú hamburguesa */
 .theme-toggle {
   position: fixed;
   top: 1.5rem;
-  right: 1.5rem;
+  right: 5rem; /* Aumentado de 1.5rem a 5rem para dar más espacio */
   z-index: 1000;
+}
+
+/* Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 576px) {
+  .theme-toggle {
+    right: 4rem;
+  }
 }
 
 .theme-toggle button {
