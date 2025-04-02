@@ -1,11 +1,610 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>My Cool Website</title>
-   </head>
-   <body>
-      <h1>Welcome to my website! ⭐️</h1>
-      <p>How was your day? 🎉</p>
-      <a href="about.html">Sobre mí</a>
-   </body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sergio Guillem Catalá | Desarrollador Full Stack</title>
+    <meta name="description"
+        content="Portfolio profesional de Sergio Guillem Catalá, desarrollador con experiencia en backend y frontend, especializado en Inteligencia Artificial y Big Data.">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        #particles-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Canvas para partículas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Botón de cambio de tema -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Cambiar tema">
+            <i data-feather="sun" class="icon-sun"></i>
+            <i data-feather="moon" class="icon-moon"></i>
+        </button>
+    </div>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#home" class="logo">SG<span>.dev</span></a>
+
+                <div class="nav-links" id="nav-links">
+                    <a href="#home" class="nav-link">Inicio</a>
+                    <a href="#about" class="nav-link">Sobre mí</a>
+                    <a href="#experience" class="nav-link">Experiencia</a>
+                    <a href="#skills" class="nav-link">Habilidades</a>
+                    <a href="#projects" class="nav-link">Proyectos</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menú">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style="position: relative; overflow: hidden;">
+        <canvas id="particles-canvas"
+            style="position: absolute; top: 0; left: 0; z-index: 0; width: 100%; height: 100%;"></canvas>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="hero-content">
+                <div class="hero-main">
+                    <div class="hero-text">
+                        <h4>Hola, soy</h4>
+                        <h1>Sergio Guillem Catalá</h1>
+
+                        <p>Desarrollador backend y frontend con enfoque en Inteligencia Artificial y Big Data.</p>
+
+                        <div class="hero-buttons">
+                            <a href="CV_SergioGuillem.pdf" class="btn btn-primary" download="CV_SergioGuillem.pdf">
+                                <i data-feather="download"></i> Descargar CV
+                            </a>
+                            <a href="#contact" class="btn btn-outline-classic">Contactar</a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/SergioGC1" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <i data-feather="github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/SergioGC1" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="mailto:sguillem04@gmail.com" aria-label="Email">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-circle">
+                            <img src="SergioGuillem.jpg" alt="Sergio Guillem Catalá" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+                    <i data-feather="chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="section-description">
+                    <p>Desarrollador con experiencia en backend y frontend. Actualmente cursando un máster de
+                        especialización en Inteligencia Artificial y Big Data en IES Abastos.</p>
+                    <p>Hábil en resolución de problemas, aprendizaje rápido y trabajo en equipo, con un enfoque
+                        constante en la mejora continua y la entrega de soluciones eficientes.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-feather="code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Experiencia en desarrollo frontend y backend, creando aplicaciones web modernas y APIs REST
+                        eficientes.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-feather="cpu"></i>
+                    </div>
+                    <h3>IA y Big Data</h3>
+                    <p>Formación especializada en Inteligencia Artificial, Machine Learning y procesamiento de grandes
+                        volúmenes de datos.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i data-feather="book-open"></i>
+                    </div>
+                    <h3>Aprendizaje Continuo</h3>
+                    <p>Compromiso con el aprendizaje constante de nuevas tecnologías y metodologías para ofrecer
+                        soluciones innovadoras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experiencia y Formación</h2>
+            </div>
+
+            <div class="experience-grid">
+                <!-- Experiencia Profesional -->
+                <div class="experience-column">
+                    <div class="column-header">
+                        <i data-feather="briefcase"></i>
+                        <h3>Experiencia Profesional</h3>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="card">
+                                <h4>Desarrollador Frontend/Backend</h4>
+                                <p class="company">Informática y Desarrollo de Software S.L.</p>
+                                <p class="period">2024</p>
+                                <ul>
+                                    <li>Desarrollo y mantenimiento de aplicaciones web en frontend y backend</li>
+                                    <li>Colaboración en equipos ágiles para implementar soluciones innovadoras</li>
+                                    <li>Diseño y optimización de APIs REST</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card">
+                                <h4>Técnico en Reparación de Equipos Informáticos</h4>
+                                <p class="company">ComputerStoresnc | Erasmus+</p>
+                                <p class="period">Pesaro, Italia | 2021</p>
+                                <ul>
+                                    <li>Resolución ágil de incidencias en equipos informáticos</li>
+                                    <li>Reparación de impresoras, proyectores y dispositivos móviles</li>
+                                    <li>Organización y gestión del almacén técnico</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación Académica -->
+                <div class="experience-column">
+                    <div class="column-header">
+                        <i data-feather="award"></i>
+                        <h3>Formación Académica</h3>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="card">
+                                <h4>Máster de Formación Profesional en Inteligencia Artificial y Big Data</h4>
+                                <p class="company">IES Abastos</p>
+                                <p class="period">2024 - Actualmente</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card">
+                                <h4>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h4>
+                                <p class="company">IES La Senia</p>
+                                <p class="period">2022 - 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="card">
+                                <h4>Técnico en Sistemas Microinformáticos y Redes (SMR)</h4>
+                                <p class="company">CIPFP Ausias March</p>
+                                <p class="period">2019 - 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Habilidades</h2>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-row">
+                    <div class="skills-category">
+                        <h3>Lenguajes de Programación</h3>
+                        <div class="skills-icons-container">
+                            <div class="skill-icon" data-tooltip="Kotlin">
+                                <img src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" title="Kotlin">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Java">
+                                <img src="https://skillicons.dev/icons?i=java" alt="Java" title="Java">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Python">
+                                <img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python">
+                            </div>
+                            <div class="skill-icon" data-tooltip="JavaScript">
+                                <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript">
+                            </div>
+                            <div class="skill-icon" data-tooltip="PHP">
+                                <img src="https://skillicons.dev/icons?i=php" alt="PHP" title="PHP">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3>Frameworks y Librerías</h3>
+                        <div class="skills-icons-container">
+                            <div class="skill-icon" data-tooltip="Spring">
+                                <img src="https://skillicons.dev/icons?i=spring" alt="Spring" title="Spring">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Symfony">
+                                <img src="https://skillicons.dev/icons?i=symfony" alt="Symfony" title="Symfony">
+                            </div>
+                            <div class="skill-icon" data-tooltip="TensorFlow">
+                                <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow"
+                                    title="TensorFlow">
+                            </div>
+                            <div class="skill-icon" data-tooltip="PyTorch">
+                                <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" title="PyTorch">
+                            </div>
+                            <div class="skill-icon" data-tooltip="React">
+                                <img src="https://skillicons.dev/icons?i=react" alt="React" title="React">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-row">
+                    <div class="skills-category">
+                        <h3>Bases de Datos</h3>
+                        <div class="skills-icons-container">
+                            <div class="skill-icon" data-tooltip="PostgreSQL">
+                                <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" title="PostgreSQL">
+                            </div>
+                            <div class="skill-icon" data-tooltip="MySQL">
+                                <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="MySQL">
+                            </div>
+                            <div class="skill-icon" data-tooltip="MongoDB">
+                                <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" title="MongoDB">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Firebase">
+                                <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" title="Firebase">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3>Herramientas y Tecnologías</h3>
+                        <div class="skills-icons-container">
+                            <div class="skill-icon" data-tooltip="Docker">
+                                <img src="https://skillicons.dev/icons?i=docker" alt="Docker" title="Docker">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Git">
+                                <img src="https://skillicons.dev/icons?i=git" alt="Git" title="Git">
+                            </div>
+                            <div class="skill-icon" data-tooltip="GitHub">
+                                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" title="GitHub">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Postman">
+                                <img src="https://skillicons.dev/icons?i=postman" alt="Postman" title="Postman">
+                            </div>
+                            <div class="skill-icon" data-tooltip="VS Code">
+                                <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" title="VS Code">
+                            </div>
+                            <div class="skill-icon" data-tooltip="Linux">
+                                <img src="https://skillicons.dev/icons?i=linux" alt="Linux" title="Linux">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header" style="background-color: var(--color-primary);">
+                        <h3>SpotiApp</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Aplicación que simula Spotify sin música, con REST API propia para gestionar datos y
+                            consultas.</p>
+
+                        <div class="project-tech">
+                            <h4>Tecnologías:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+
+                        <p class="project-details">Desarrollo de backend y diseño de arquitectura de API REST.</p>
+
+                        <div class="project-links">
+                            <a href="https://github.com/SergioGC1/SpotifyApp" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-outline btn-sm">
+                                <i data-feather="github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header" style="background-color: var(--color-primary);">
+                        <h3>AdoPet</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Aplicación para adopción de animales con Firebase y arquitectura MVVM.</p>
+
+                        <div class="project-tech">
+                            <h4>Tecnologías:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                        </div>
+
+                        <p class="project-details">Funcionalidades: Publicaciones en tiempo real, chat entre usuarios,
+                            filtrado avanzado.</p>
+
+                        <div class="project-links">
+                            <a href="https://github.com/SergioGC1/AdoPet" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-outline btn-sm">
+                                <i data-feather="github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header" style="background-color: var(--color-primary);">
+                        <h3>Psicologum</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Portal profesional para psicólogos, desarrollado con arquitectura hexagonal en Spring Boot.
+                        </p>
+
+                        <div class="project-tech">
+                            <h4>Tecnologías:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">DBeaver</span>
+                            </div>
+                        </div>
+
+                        <p class="project-details">Implementación de arquitectura hexagonal para separación de
+                            responsabilidades.</p>
+
+                        <div class="project-links">
+                            <a href="https://github.com/SergioGC1/PsicologumBack" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                <i data-feather="github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+            </div>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p>+34 640 965 286</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="mail"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:sguillem04@gmail.com">sguillem04@gmail.com</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="map-pin"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Valencia, España</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/SergioGC1" target="_blank"
+                            rel="noopener noreferrer">SergioGC1</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Sergio Guillem Catalá.</p>
+
+                <div class="social-links">
+                    <a href="https://github.com/SergioGC1" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/SergioGC1" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="mailto:sguillem04@gmail.com" aria-label="Email">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/skills.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            feather.replace();
+            if (typeof initTheme === "function") initTheme();
+            if (typeof initMobileMenu === "function") initMobileMenu();
+            if (typeof initNavbarScroll === "function") initNavbarScroll();
+            if (typeof initTypedText === "function") initTypedText();
+            if (typeof initSkillsTooltips === "function") initSkillsTooltips();
+            const currentYearElement = document.getElementById("current-year");
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+        });
+
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createParticles() {
+            particles = [];
+            const numParticles = 80;
+            for (let i = 0; i < numParticles; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 3 + 1,
+                    speedX: Math.random() * 1 - 0.5,
+                    speedY: Math.random() * 1 - 0.5,
+                });
+            }
+        }
+
+        function drawLines() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = 'rgba(59,130,246,0.1)';
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let p of particles) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(59,130,246,0.3)';
+                ctx.fill();
+
+                p.x += p.speedX;
+                p.y += p.speedY;
+
+                if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+            }
+
+            drawLines();
+            requestAnimationFrame(animateParticles);
+        }
+
+        createParticles();
+        animateParticles();
+    </script>
+</body>
+
 </html>
